@@ -20,6 +20,7 @@ const map = {
     '': 'details'
     }
 
+// Copy/paste this from vista-dox website; not in vista-dox xlsx 
 const filedesc = {
     "2": "#2 The PATIENT file contains all the patients followed by the medical center/ Outpatient clinic. At a minimum each patient entry must have a NAME, DATE OF BIRTH and SOCIAL SECURITY NUMBER. In order to add a new patient to the PATIENT file the user must also indicate whether or not the patient is requesting to receive care as a VETERAN of the U.S. Armed Forces and specify the TYPE of patient being added to the system. For the most part the information contained in this file is demographic in nature, i.e., address, employment, service history, etc., however data concerning admissions, appointments,etc., is also stored in this file. The ADMISSION sub-field is scheduled to be moved into the new PATIENT MOVEMENT file by the end of calendar year 1989. Care should be used when removing a patient from the PATIENT file since virtually all other DHCP modules do utilize data from this file. Of the many fields in the file you will note that many are preceeded by an asterisk. Those fields are scheduled to be removed from the file due to either lack of use or replacement by another field/file in the next release.",
     "4": "#4 This file contains a listing of VA institutions. It is cross-referenced by name and station number. The Number field is no longer meaningful (it had previously referenced the station number).",
@@ -32,7 +33,7 @@ const filedesc = {
     "200": "#200 This file contains data on employees, users, practitioners, etc. who were previously in Files 3,6,16 and others. DHCP packages must check with the KERNEL developers to see that a given number/namespace is clear for them to use. Field numbers 53-59.9 reserved for Pharm. Nodes and X-ref 'PS*'. Field numbers 70-79.9 reserved for Radiology Nodes and X-ref 'RA*'. Field numbers 720-725 reserved for DSSM Nodes and X-ref 'EC*' and 'AEC*'. Field numbers 740-749.9 reserved for QA Nodes and X-ref 'QA*'. Field numbers 654-654.9 reserved for Social work Node 654 and X-ref 'SW*'. Field numbers 500-500.9 reserved for mailman Node 500 and X-ref 'XM*' and 'AXM*'."
 };
 
-readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
+readXlsxFile("vista-dox3+228.9.xlsx", { sheet: "vista-dox", transformData(data)
     { data.shift(2); return data; }}).then((rows) => {
     // `rows` is an array of rows
     // each row being an array of cells.
@@ -59,14 +60,34 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                         filenums.push(targetid);
                     }
                 }
+                else if (type.startsWith("POINTER Multiple ")) {
+                    var targetid = type.substring(type.lastIndexOf('#') + 1);
+                    if (!filenums.includes(targetid)) {
+                        filenums.push(targetid);
+                    }
+                }
+                else if (type.startsWith("DATE Multiple ")) {
+                    var targetid = type.substring(type.lastIndexOf('#') + 1);
+                    if (!filenums.includes(targetid)) {
+                        filenums.push(targetid);
+                    }
+                }
+                else if (type.startsWith("Multiple ")) {
+                    var targetid = type.substring(type.lastIndexOf('#') + 1);
+                    if (!filenums.includes(targetid)) {
+                        filenums.push(targetid);
+                    }
+                }
             }
         }
     });
 
+    console.log(filenums);
+
     // PASS 2: now create the Logical Models
     rows.forEach(row => {
         var file = row[1];
-        var filename = row[2];
+        var filename = "" + row[2];
         var field = row[3];
         var fieldname = row[4];
         var type = row[5];
@@ -117,10 +138,12 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                 var card_min = 0;
                 if (details) {
                     var desc_idx = details.indexOf("DESCRIPTION:");
-                    var _description = details.substring(desc_idx + 15).trim();
-                    var desc_end_idx = _description.indexOf('\n');
-                    if (desc_end_idx == -1) desc_end_idx = _description.length;
-                    description = _description.substring(0, desc_end_idx).trim();
+                    if (desc_idx != -1) {
+                        var _description = details.substring(desc_idx + 15).trim();
+                        var desc_end_idx = _description.indexOf('\n');
+                        if (desc_end_idx == -1) desc_end_idx = _description.length;
+                        description = _description.substring(0, desc_end_idx).trim();
+                    }
                     card_min = details.indexOf("*REQUIRED FIELD*")!=-1?1:0;
                 }
 
@@ -140,30 +163,21 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                     element.max = "*";
                     // convert targetid to name
                     element.type = [ {
-                        "code": "Reference",
-                        "targetProfile": [
-                            BASE_URL_SD + targetid
-                        ]
+                        "code": BASE_URL_SD + targetid
                     } ];
                 }
                 else if (type.startsWith("POINTER TO ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1, type.lastIndexOf(')'));
                     //var targetfilename = type.substring(11, type.indexOf(" FILE")).replace(/ /g, '_');
                     element.type = [ {
-                        "code": "Reference",
-                        "targetProfile": [
-                            BASE_URL_SD + targetid
-                        ]
+                        "code": BASE_URL_SD + targetid
                     } ];
                 }
                 else if (type && type.startsWith("DATE Multiple ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1);
                     element.max = "*";
                     element.type = [ {
-                        "code": "Reference",
-                        "targetProfile": [
-                            BASE_URL_SD + targetid
-                        ]
+                        "code": BASE_URL_SD + targetid
                     } ];
                 }
                 else if (type.startsWith("Multiple ")) {
@@ -209,13 +223,13 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                         var display = _value[0].match(/FOR (.+);/)[1];
                         valueset.compose.include[0].concept.push({
                             "code": code,
-                            "display": display
+                            "display": display.trim()
                         });
                     };
                     valuesets.push(valueset);
 
-                    // workaround for QA error
-                    element.type.push({ "code": "Coding" });
+                    // Next is workaround for QA error; but should show SET; so ignore
+                    // element.type = [ { "code": "Coding" } ];
                     element.binding = {
                         "strength": "required",
                         "valueSet": valueset.url
@@ -226,16 +240,16 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
     });
 
     Object.values(filesds).forEach(filesd => {
-        var filename = "../input/resources/StructureDefinition-" + filesd.name + ".json";
-        //console.log(filename);
-        //console.log(JSON.stringify(filesd, null, 2));
+        var filename = "../input/resources/StructureDefinition-" + filesd.id + ".json";
+        // console.log(filename);
+        // console.log(JSON.stringify(filesd, null, 2));
         fs.writeFileSync(filename, JSON.stringify(filesd, null, 2))
     });
 
     valuesets.forEach(valueset => {
-        var filename = "../input/resources/ValueSet-" + valueset.name + ".json";
-        console.log(filename);
-        ////console.log(JSON.stringify(valueset, null, 2));
+        var filename = "../input/resources/ValueSet-" + valueset.id + ".json";
+        // console.log(filename);
+        // console.log(JSON.stringify(valueset, null, 2));
         fs.writeFileSync(filename, JSON.stringify(valueset, null, 2))
     });
 })

@@ -1,3 +1,9 @@
 == Suppressed Messages ==
-# Known
+# Known, will not generate code, so ignore
 Rule eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed
+
+# Known
+% has a binding, but no bindable types are present [SET]
+
+# Known
+This element has a Binding but the types [SET] do not make this kind of constraint relevant

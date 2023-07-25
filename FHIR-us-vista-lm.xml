@@ -3,18 +3,101 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/200.032" key="StructureDefinition-200.032" name="ACCESSIBLE FILE"/>
+<artifact id="ValueSet/200.032-6" key="ValueSet-200.032-6" name="ACCESSIBLE FILE-AUDIT ACCESS"/>
+<artifact id="ValueSet/200.032-1" key="ValueSet-200.032-1" name="ACCESSIBLE FILE-DATA DICTIONARY ACCESS"/>
+<artifact id="ValueSet/200.032-2" key="ValueSet-200.032-2" name="ACCESSIBLE FILE-DELETE ACCESS"/>
+<artifact id="ValueSet/200.032-3" key="ValueSet-200.032-3" name="ACCESSIBLE FILE-LAYGO ACCESS"/>
+<artifact id="ValueSet/200.032-4" key="ValueSet-200.032-4" name="ACCESSIBLE FILE-READ ACCESS"/>
+<artifact id="ValueSet/200.032-5" key="ValueSet-200.032-5" name="ACCESSIBLE FILE-WRITE ACCESS"/>
 <artifact id="StructureDefinition/4.11" key="StructureDefinition-4.11" name="AGENCY"/>
 <artifact id="ValueSet/4.11-.02" key="ValueSet-4.11-.02" name="AGENCY-AGENCY CODE"/>
+<artifact id="StructureDefinition/200.194" key="StructureDefinition-200.194" name="ALERT DATE/TIME"/>
+<artifact id="ValueSet/200.194-.05" key="ValueSet-200.194-.05" name="ALERT DATE/TIME-ACTION FLAG"/>
+<artifact id="ValueSet/200.194-.04" key="ValueSet-200.194-.04" name="ALERT DATE/TIME-NEW ALERT FLAG"/>
+<artifact id="StructureDefinition/200.04" key="StructureDefinition-200.04" name="ALIAS"/>
+<artifact id="StructureDefinition/200.196" key="StructureDefinition-200.196" name="ALLOWABLE NEW MENU PREFIX"/>
 <artifact id="StructureDefinition/1.2" key="StructureDefinition-1.2" name="ALTERNATE EDITOR"/>
+<artifact id="StructureDefinition/4.014" key="StructureDefinition-4.014" name="ASSOCIATIONS"/>
+<artifact id="StructureDefinition/4.03" key="StructureDefinition-4.03" name="CONTACT"/>
 <artifact id="StructureDefinition/779.004" key="StructureDefinition-779.004" name="COUNTRY CODE"/>
 <artifact id="ValueSet/779.004-99.98" key="ValueSet-779.004-99.98" name="COUNTRY CODE-MASTER ENTRY FOR VUID"/>
+<artifact id="StructureDefinition/5.01" key="StructureDefinition-5.01" name="COUNTY"/>
+<artifact id="StructureDefinition/200.010113" key="StructureDefinition-200.010113" name="CPRS TAB"/>
+<artifact id="StructureDefinition/200.0089832" key="StructureDefinition-200.0089832" name="DEFINED FORMATS FOR LM"/>
+<artifact id="ValueSet/200.0089832-1" key="ValueSet-200.0089832-1" name="DEFINED FORMATS FOR LM-DEFAULT"/>
+<artifact id="StructureDefinition/200.0089833" key="StructureDefinition-200.0089833" name="DEFINED PHRASES FOR LM"/>
+<artifact id="StructureDefinition/200.052" key="StructureDefinition-200.052" name="DELEGATED KEYS"/>
+<artifact id="ValueSet/200.052-3" key="ValueSet-200.052-3" name="DELEGATED KEYS-MAY RE-DELEGATE"/>
+<artifact id="StructureDefinition/200.19" key="StructureDefinition-200.19" name="DELEGATED OPTIONS"/>
+<artifact id="ValueSet/200.19-3" key="ValueSet-200.19-3" name="DELEGATED OPTIONS-EDITABLE"/>
+<artifact id="StructureDefinition/200.02" key="StructureDefinition-200.02" name="DIVISION"/>
+<artifact id="ValueSet/200.02-1" key="ValueSet-200.02-1" name="DIVISION-DEFAULT"/>
+<artifact id="StructureDefinition/200.72" key="StructureDefinition-200.72" name="DMMS UNITS"/>
 <artifact id="StructureDefinition/4.2" key="StructureDefinition-4.2" name="DOMAIN"/>
 <artifact id="ValueSet/4.2-1.7" key="ValueSet-4.2-1.7" name="DOMAIN-DISABLE TURN COMMAND"/>
 <artifact id="ValueSet/4.2-6.61" key="ValueSet-4.2-6.61" name="DOMAIN-TCP/IP POLL FLAG"/>
+<artifact id="StructureDefinition/724" key="StructureDefinition-724" name="DSS UNIT"/>
+<artifact id="ValueSet/724-16" key="ValueSet-724-16" name="DSS UNIT-ALLOW DUPLICATES"/>
+<artifact id="ValueSet/724-10" key="ValueSet-724-10" name="DSS UNIT-CATEGORY (Y/N)"/>
+<artifact id="ValueSet/724-11" key="ValueSet-724-11" name="DSS UNIT-DATA ENTRY DATE/TIME DEFAULT"/>
+<artifact id="ValueSet/724-5" key="ValueSet-724-5" name="DSS UNIT-INACTIVE (Y/N)"/>
+<artifact id="ValueSet/724-13" key="ValueSet-724-13" name="DSS UNIT-SEND TO PCE"/>
+<artifact id="ValueSet/724-7" key="ValueSet-724-7" name="DSS UNIT-USE FOR EVENT CAPTURE"/>
+<artifact id="StructureDefinition/779.00409" key="StructureDefinition-779.00409" name="EFFECTIVE DATE/TIME"/>
+<artifact id="ValueSet/779.00409-.02" key="ValueSet-779.00409-.02" name="EFFECTIVE DATE/TIME-STATUS"/>
+<artifact id="StructureDefinition/757.01" key="StructureDefinition-757.01" name="EXPRESSIONS"/>
+<artifact id="ValueSet/757.01-9" key="ValueSet-757.01-9" name="EXPRESSIONS-DEACTIVATION FLAG"/>
+<artifact id="ValueSet/757.01-3" key="ValueSet-757.01-3" name="EXPRESSIONS-SCOPE"/>
 <artifact id="StructureDefinition/4.1" key="StructureDefinition-4.1" name="FACILITY TYPE"/>
 <artifact id="ValueSet/4.1-3" key="ValueSet-4.1-3" name="FACILITY TYPE-STATUS"/>
+<artifact id="StructureDefinition/1" key="StructureDefinition-1" name="FILE"/>
+<artifact id="StructureDefinition/4.999" key="StructureDefinition-4.999" name="HISTORY"/>
+<artifact id="ValueSet/4.999-.08" key="ValueSet-4.999-.08" name="HISTORY-ACTIVATED FACILITY"/>
+<artifact id="ValueSet/4.999-.07" key="ValueSet-4.999-.07" name="HISTORY-DEACTIVATED FACILITY / STA #"/>
 <artifact id="StructureDefinition/771.9" key="StructureDefinition-771.9" name="HL7 DEGREE"/>
+<artifact id="StructureDefinition/771.5" key="StructureDefinition-771.5" name="HL7 VERSION"/>
+<artifact id="StructureDefinition/44" key="StructureDefinition-44" name="HOSPITAL LOCATION"/>
+<artifact id="ValueSet/44-2802" key="ValueSet-44-2802" name="HOSPITAL LOCATION-ADMINISTER INPATIENT MEDS?"/>
+<artifact id="ValueSet/44-24" key="ValueSet-44-24" name="HOSPITAL LOCATION-ASK FOR CHECK IN/OUT TIME"/>
+<artifact id="ValueSet/44-2504" key="ValueSet-44-2504" name="HOSPITAL LOCATION-CLINIC MEETS AT THIS FACILITY?"/>
+<artifact id="ValueSet/44-2004" key="ValueSet-44-2004" name="HOSPITAL LOCATION-COLLATERAL VISITS? (Y OR N)"/>
+<artifact id="ValueSet/44-2801" key="ValueSet-44-2801" name="HOSPITAL LOCATION-DEFAULT TO PC PRACTITIONER?"/>
+<artifact id="ValueSet/44-61" key="ValueSet-44-61" name="HOSPITAL LOCATION-DIRECT PATIENT SCHEDULING?"/>
+<artifact id="ValueSet/44-62" key="ValueSet-44-62" name="HOSPITAL LOCATION-DISPLAY CLIN APPT TO PATIENTS?"/>
+<artifact id="ValueSet/44-1917" key="ValueSet-44-1917" name="HOSPITAL LOCATION-DISPLAY INCREMENTS PER HOUR"/>
+<artifact id="ValueSet/44-6" key="ValueSet-44-6" name="HOSPITAL LOCATION-DISPOSITION ACTION"/>
+<artifact id="ValueSet/44-20" key="ValueSet-44-20" name="HOSPITAL LOCATION-E-CHECKIN ALLOWED"/>
+<artifact id="ValueSet/44-2502.5" key="ValueSet-44-2502.5" name="HOSPITAL LOCATION-INCLUDE ON FILE ROOM LISTS?"/>
+<artifact id="ValueSet/44-2502" key="ValueSet-44-2502" name="HOSPITAL LOCATION-NON-COUNT CLINIC? (Y OR N)"/>
+<artifact id="ValueSet/44-50.01" key="ValueSet-44-50.01" name="HOSPITAL LOCATION-OCCASION OF SERVICE CLINIC?"/>
+<artifact id="ValueSet/44-21" key="ValueSet-44-21" name="HOSPITAL LOCATION-PRE-CHECKIN ALLOWED"/>
+<artifact id="ValueSet/44-2500" key="ValueSet-44-2500" name="HOSPITAL LOCATION-PROHIBIT ACCESS TO CLINIC?"/>
+<artifact id="ValueSet/44-2000.5" key="ValueSet-44-2000.5" name="HOSPITAL LOCATION-REQUIRE ACTION PROFILES?"/>
+<artifact id="ValueSet/44-2000" key="ValueSet-44-2000" name="HOSPITAL LOCATION-REQUIRE X-RAY FILMS?"/>
+<artifact id="ValueSet/44-1918.5" key="ValueSet-44-1918.5" name="HOSPITAL LOCATION-SCHEDULE ON HOLIDAYS?"/>
+<artifact id="ValueSet/44-9" key="ValueSet-44-9" name="HOSPITAL LOCATION-SERVICE"/>
+<artifact id="ValueSet/44-14" key="ValueSet-44-14" name="HOSPITAL LOCATION-SPECIAL AMIS STOP"/>
+<artifact id="ValueSet/44-2" key="ValueSet-44-2" name="HOSPITAL LOCATION-TYPE"/>
+<artifact id="ValueSet/44-1913" key="ValueSet-44-1913" name="HOSPITAL LOCATION-VARIABLE APP'NTMENT LENGTH"/>
+<artifact id="ValueSet/44-30" key="ValueSet-44-30" name="HOSPITAL LOCATION-WORKLOAD VALIDATION AT CHK OUT"/>
+<artifact id="StructureDefinition/80" key="StructureDefinition-80" name="ICD DIAGNOSIS"/>
+<artifact id="ValueSet/80-1.7" key="ValueSet-80-1.7" name="ICD DIAGNOSIS-ICD EXPANDED"/>
+<artifact id="ValueSet/80-1.5" key="ValueSet-80-1.5" name="ICD DIAGNOSIS-MDC24"/>
+<artifact id="ValueSet/80-1.6" key="ValueSet-80-1.6" name="ICD DIAGNOSIS-MDC25"/>
+<artifact id="ValueSet/80-1.9" key="ValueSet-80-1.9" name="ICD DIAGNOSIS-POA EXEMPT"/>
+<artifact id="ValueSet/80-1.3" key="ValueSet-80-1.3" name="ICD DIAGNOSIS-UNACCEPTABLE AS PRINCIPAL DX"/>
+<artifact id="StructureDefinition/4.9999" key="StructureDefinition-4.9999" name="IDENTIFIER"/>
+<artifact id="ValueSet/4.9999-.04" key="ValueSet-4.9999-.04" name="IDENTIFIER-STATUS"/>
+<artifact id="StructureDefinition/79.1" key="StructureDefinition-79.1" name="IMAGING LOCATIONS"/>
+<artifact id="ValueSet/79.1-17" key="ValueSet-79.1-17" name="IMAGING LOCATIONS-ALLOW 'RELEASED/NOT VERIFIED'"/>
+<artifact id="ValueSet/79.1-21" key="ValueSet-79.1-21" name="IMAGING LOCATIONS-CREDIT METHOD"/>
+<artifact id="ValueSet/79.1-18" key="ValueSet-79.1-18" name="IMAGING LOCATIONS-PRINT DX CODES IN REPORT?"/>
+<artifact id="ValueSet/79.1-.1" key="ValueSet-79.1-.1" name="IMAGING LOCATIONS-SUPPRESS ORDERING?"/>
+<artifact id="ValueSet/79.1-20" key="ValueSet-79.1-20" name="IMAGING LOCATIONS-URGENT REQUEST ALERTS?"/>
+<artifact id="ValueSet/79.1-26" key="ValueSet-79.1-26" name="IMAGING LOCATIONS-VOICE DICTATION AUTO-PRINT"/>
 <artifact id="StructureDefinition/4" key="StructureDefinition-4" name="INSTITUTION"/>
+<artifact id="StructureDefinition/4.05" key="StructureDefinition-4.05" name="INSTITUTION ASSOCIATION TYPES"/>
 <artifact id="ValueSet/4-95" key="ValueSet-4-95" name="INSTITUTION-AGENCY CODE"/>
 <artifact id="ValueSet/4-102" key="ValueSet-4-102" name="INSTITUTION-CERNER"/>
 <artifact id="ValueSet/4-720" key="ValueSet-4-720" name="INSTITUTION-CURRENT LOCATION"/>
@@ -23,10 +106,16 @@
 <artifact id="ValueSet/4-11" key="ValueSet-4-11" name="INSTITUTION-STATUS"/>
 <artifact id="ValueSet/4-802" key="ValueSet-4-802" name="INSTITUTION-TIMEZONE EXCEPTION"/>
 <artifact id="ValueSet/4-.06" key="ValueSet-4-.06" name="INSTITUTION-VA TYPE CODE"/>
+<artifact id="StructureDefinition/200.051" key="StructureDefinition-200.051" name="KEYS"/>
 <artifact id="StructureDefinition/.85" key="StructureDefinition-.85" name="LANGUAGE"/>
 <artifact id="ValueSet/.85-.06" key="ValueSet-.85-.06" name="LANGUAGE-SCOPE"/>
 <artifact id="ValueSet/.85-.07" key="ValueSet-.85-.07" name="LANGUAGE-TYPE"/>
+<artifact id="StructureDefinition/200.541" key="StructureDefinition-200.541" name="LICENSING STATE"/>
+<artifact id="StructureDefinition/200.0089834" key="StructureDefinition-200.0089834" name="LM LIMIT WP FIELDS TO EDIT"/>
+<artifact id="StructureDefinition/200.198" key="StructureDefinition-200.198" name="MENU TEMPLATE"/>
 <artifact id="StructureDefinition/20" key="StructureDefinition-20" name="NAME COMPONENTS"/>
+<artifact id="StructureDefinition/200.005" key="StructureDefinition-200.005" name="NETWORK ADDRESS"/>
+<artifact id="ValueSet/200.005-4" key="ValueSet-200.005-4" name="NETWORK ADDRESS-COUNTRY"/>
 <artifact id="StructureDefinition/200" key="StructureDefinition-200" name="NEW PERSON"/>
 <artifact id="ValueSet/200-11.6" key="ValueSet-200-11.6" name="NEW PERSON-ALLOW ARA ACCESS"/>
 <artifact id="ValueSet/200-71" key="ValueSet-200-71" name="NEW PERSON-ALLOW VERIFYING OF OTHERS"/>
@@ -100,23 +189,51 @@
 <artifact id="ValueSet/19-83" key="ValueSet-19-83" name="OPTION-SUPRESS DEVICE PROMPT"/>
 <artifact id="ValueSet/19-4" key="ValueSet-19-4" name="OPTION-TYPE"/>
 <artifact id="ValueSet/19-.15" key="ValueSet-19-.15" name="OPTION-X ACTION PRESENT"/>
+<artifact id="StructureDefinition/101.13" key="StructureDefinition-101.13" name="OR CPRS TABS"/>
 <artifact id="StructureDefinition/450" key="StructureDefinition-450" name="PAID EMPLOYEE"/>
 <artifact id="ValueSet/450-902" key="ValueSet-450-902" name="PAID EMPLOYEE-Requires Transmission"/>
+<artifact id="StructureDefinition/200.05" key="StructureDefinition-200.05" name="PERSON CLASS"/>
+<artifact id="ValueSet/8932.1-90002" key="ValueSet-8932.1-90002" name="PERSON CLASS-INDIVIDUAL/NON"/>
+<artifact id="ValueSet/8932.1-99.98" key="ValueSet-8932.1-99.98" name="PERSON CLASS-MASTER ENTRY FOR VUID"/>
+<artifact id="ValueSet/8932.1-3" key="ValueSet-8932.1-3" name="PERSON CLASS-STATUS"/>
+<artifact id="StructureDefinition/200.0351" key="StructureDefinition-200.0351" name="PERSONAL DIAGNOSES LIST"/>
+<artifact id="StructureDefinition/4.24" key="StructureDefinition-4.24" name="POLL LIST"/>
 <artifact id="StructureDefinition/125" key="StructureDefinition-125" name="PROBLEM SELECTION LIST"/>
 <artifact id="ValueSet/125-.04" key="ValueSet-125-.04" name="PROBLEM SELECTION LIST-CLASS"/>
 <artifact id="StructureDefinition/8932.2" key="StructureDefinition-8932.2" name="PROGRAM OF STUDY"/>
 <artifact id="StructureDefinition/7" key="StructureDefinition-7" name="PROVIDER CLASS"/>
+<artifact id="StructureDefinition/200.074" key="StructureDefinition-200.074" name="RAD/NUC MED LOCATION ACCESS"/>
+<artifact id="StructureDefinition/200.03" key="StructureDefinition-200.03" name="SECONDARY MENU OPTIONS"/>
+<artifact id="StructureDefinition/19.1" key="StructureDefinition-19.1" name="SECURITY KEY"/>
+<artifact id="ValueSet/19.1-.04" key="ValueSet-19.1-.04" name="SECURITY KEY-KEEP AT TERMINATE"/>
+<artifact id="ValueSet/19.1-.03" key="ValueSet-19.1-.03" name="SECURITY KEY-PERSON LOOKUP"/>
+<artifact id="ValueSet/19.1-.05" key="ValueSet-19.1-.05" name="SECURITY KEY-SEND TO J2EE"/>
 <artifact id="StructureDefinition/49" key="StructureDefinition-49" name="SERVICE/SECTION"/>
 <artifact id="ValueSet/49-12" key="ValueSet-49-12" name="SERVICE/SECTION-AMBULATORY CARE FLAG"/>
 <artifact id="ValueSet/49-11" key="ValueSet-49-11" name="SERVICE/SECTION-TYPE OF COSTING SECTION"/>
 <artifact id="ValueSet/49-1.7" key="ValueSet-49-1.7" name="SERVICE/SECTION-TYPE OF SERVICE"/>
+<artifact id="StructureDefinition/200.0089831" key="StructureDefinition-200.0089831" name="SPELLING EXCEPTION DICTIONARY"/>
 <artifact id="StructureDefinition/5" key="StructureDefinition-5" name="STATE"/>
+<artifact id="StructureDefinition/200.55" key="StructureDefinition-200.55" name="STATE ISSUING DEA NUMBER"/>
 <artifact id="ValueSet/5-2.1" key="ValueSet-5-2.1" name="STATE-AAC RECOGNIZED"/>
 <artifact id="ValueSet/5-2.2" key="ValueSet-5-2.2" name="STATE-US STATE OR POSSESSION"/>
+<artifact id="StructureDefinition/4.23" key="StructureDefinition-4.23" name="SYNONYM"/>
+<artifact id="StructureDefinition/4.043" key="StructureDefinition-4.043" name="TAXONOMY CODE"/>
+<artifact id="ValueSet/4.043-.02" key="ValueSet-4.043-.02" name="TAXONOMY CODE-PRIMARY CODE"/>
+<artifact id="ValueSet/4.043-.03" key="ValueSet-4.043-.03" name="TAXONOMY CODE-STATUS"/>
 <artifact id="StructureDefinition/3.2" key="StructureDefinition-3.2" name="TERMINAL TYPE"/>
 <artifact id="ValueSet/3.2-.02" key="ValueSet-3.2-.02" name="TERMINAL TYPE-SELECTABLE AT SIGN-ON"/>
 <artifact id="StructureDefinition/3.1" key="StructureDefinition-3.1" name="TITLE"/>
+<artifact id="StructureDefinition/4.21" key="StructureDefinition-4.21" name="TRANSMISSION SCRIPT"/>
+<artifact id="ValueSet/4.21-1.5" key="ValueSet-4.21-1.5" name="TRANSMISSION SCRIPT-OUT OF SERVICE"/>
+<artifact id="ValueSet/4.21-1.2" key="ValueSet-4.21-1.2" name="TRANSMISSION SCRIPT-TYPE"/>
+<artifact id="StructureDefinition/200.01" key="StructureDefinition-200.01" name="UCI"/>
+<artifact id="StructureDefinition/200.07" key="StructureDefinition-200.07" name="USER CLASS"/>
+<artifact id="ValueSet/200.07-2" key="ValueSet-200.07-2" name="USER CLASS-ISPRIMARY"/>
+<artifact id="StructureDefinition/779.00401" key="StructureDefinition-779.00401" name="VERSION"/>
+<artifact id="StructureDefinition/200.06" key="StructureDefinition-200.06" name="VISITED FROM"/>
 <artifact id="StructureDefinition/1.71" key="StructureDefinition-1.71" name="WORLD TIMEZONES"/>
+<artifact id="StructureDefinition/5.02" key="StructureDefinition-5.02" name="ZIP CODE"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

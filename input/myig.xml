@@ -57,15 +57,15 @@
       <value value="experimental"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
+      <code value="excludejson"/>
       <value value="false"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
+      <code value="excludexml"/>
       <value value="false"/>
     </parameter>
     <parameter>
-      <code value="generate-ttl"/>
+      <code value="excludettl"/>
       <value value="false"/>
     </parameter>
     <parameter>
