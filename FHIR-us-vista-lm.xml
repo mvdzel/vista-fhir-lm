@@ -45,6 +45,10 @@
 <artifact id="ValueSet/724-13" key="ValueSet-724-13" name="DSS UNIT-SEND TO PCE"/>
 <artifact id="ValueSet/724-7" key="ValueSet-724-7" name="DSS UNIT-USE FOR EVENT CAPTURE"/>
 <artifact id="StructureDefinition/779.00409" key="StructureDefinition-779.00409" name="EFFECTIVE DATE/TIME"/>
+<artifact id="StructureDefinition/200.042" key="StructureDefinition-200.042" name="EFFECTIVE DATE/TIME"/>
+<artifact id="StructureDefinition/4.042" key="StructureDefinition-4.042" name="EFFECTIVE DATE/TIME"/>
+<artifact id="ValueSet/4.042-.02" key="ValueSet-4.042-.02" name="EFFECTIVE DATE/TIME-STATUS"/>
+<artifact id="ValueSet/200.042-.02" key="ValueSet-200.042-.02" name="EFFECTIVE DATE/TIME-STATUS"/>
 <artifact id="ValueSet/779.00409-.02" key="ValueSet-779.00409-.02" name="EFFECTIVE DATE/TIME-STATUS"/>
 <artifact id="StructureDefinition/757.01" key="StructureDefinition-757.01" name="EXPRESSIONS"/>
 <artifact id="ValueSet/757.01-9" key="ValueSet-757.01-9" name="EXPRESSIONS-DEACTIVATION FLAG"/>
@@ -192,6 +196,7 @@
 <artifact id="StructureDefinition/101.13" key="StructureDefinition-101.13" name="OR CPRS TABS"/>
 <artifact id="StructureDefinition/450" key="StructureDefinition-450" name="PAID EMPLOYEE"/>
 <artifact id="ValueSet/450-902" key="ValueSet-450-902" name="PAID EMPLOYEE-Requires Transmission"/>
+<artifact id="StructureDefinition/8932.1" key="StructureDefinition-8932.1" name="PERSON CLASS"/>
 <artifact id="StructureDefinition/200.05" key="StructureDefinition-200.05" name="PERSON CLASS"/>
 <artifact id="ValueSet/8932.1-90002" key="ValueSet-8932.1-90002" name="PERSON CLASS-INDIVIDUAL/NON"/>
 <artifact id="ValueSet/8932.1-99.98" key="ValueSet-8932.1-99.98" name="PERSON CLASS-MASTER ENTRY FOR VUID"/>
@@ -229,6 +234,7 @@
 <artifact id="ValueSet/4.21-1.2" key="ValueSet-4.21-1.2" name="TRANSMISSION SCRIPT-TYPE"/>
 <artifact id="StructureDefinition/200.01" key="StructureDefinition-200.01" name="UCI"/>
 <artifact id="StructureDefinition/200.07" key="StructureDefinition-200.07" name="USER CLASS"/>
+<artifact id="StructureDefinition/201" key="StructureDefinition-201" name="USER CLASS"/>
 <artifact id="ValueSet/200.07-2" key="ValueSet-200.07-2" name="USER CLASS-ISPRIMARY"/>
 <artifact id="StructureDefinition/779.00401" key="StructureDefinition-779.00401" name="VERSION"/>
 <artifact id="StructureDefinition/200.06" key="StructureDefinition-200.06" name="VISITED FROM"/>

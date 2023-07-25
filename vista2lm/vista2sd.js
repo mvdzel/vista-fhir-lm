@@ -60,19 +60,7 @@ readXlsxFile("vista-dox3+228.9.xlsx", { sheet: "vista-dox", transformData(data)
                         filenums.push(targetid);
                     }
                 }
-                else if (type.startsWith("POINTER Multiple ")) {
-                    var targetid = type.substring(type.lastIndexOf('#') + 1);
-                    if (!filenums.includes(targetid)) {
-                        filenums.push(targetid);
-                    }
-                }
-                else if (type.startsWith("DATE Multiple ")) {
-                    var targetid = type.substring(type.lastIndexOf('#') + 1);
-                    if (!filenums.includes(targetid)) {
-                        filenums.push(targetid);
-                    }
-                }
-                else if (type.startsWith("Multiple ")) {
+                else if (type.indexOf("Multiple ") != -1) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1);
                     if (!filenums.includes(targetid)) {
                         filenums.push(targetid);
@@ -158,34 +146,20 @@ readXlsxFile("vista-dox3+228.9.xlsx", { sheet: "vista-dox", transformData(data)
                 };
                 filesd.differential.element.push(element);
 
-                if (type.startsWith("POINTER Multiple ")) {
-                    var targetid = type.substring(type.lastIndexOf('#') + 1);
-                    element.max = "*";
-                    // convert targetid to name
-                    element.type = [ {
-                        "code": BASE_URL_SD + targetid
-                    } ];
-                }
-                else if (type.startsWith("POINTER TO ")) {
+                if (type.startsWith("POINTER TO ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1, type.lastIndexOf(')'));
-                    //var targetfilename = type.substring(11, type.indexOf(" FILE")).replace(/ /g, '_');
                     element.type = [ {
-                        "code": BASE_URL_SD + targetid
+                        "code": "Reference",
+                        "targetProfile": [ BASE_URL_SD + targetid ]
                     } ];
                 }
-                else if (type && type.startsWith("DATE Multiple ")) {
+                else if (type.indexOf("Multiple ") != -1) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1);
                     element.max = "*";
                     element.type = [ {
-                        "code": BASE_URL_SD + targetid
+                        "code": "Reference",
+                        "targetProfile": [ BASE_URL_SD + targetid ]
                     } ];
-                }
-                else if (type.startsWith("Multiple ")) {
-                    var targetid = type.substring(type.lastIndexOf('#') + 1);
-                    element.max = "*";
-                    element.type = [ {
-                        "code": BASE_URL_SD + targetid
-                    } ];               
                 }
                 else {
                     element.type = [ {

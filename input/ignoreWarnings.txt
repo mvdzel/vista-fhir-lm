@@ -7,3 +7,6 @@ Rule eld-20: 'Element names should be simple alphanumerics with a max of 64 char
 
 # Known
 This element has a Binding but the types [SET] do not make this kind of constraint relevant
+
+# Known
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
