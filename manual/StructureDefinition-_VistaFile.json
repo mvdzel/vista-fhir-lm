@@ -1,0 +1,43 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "vista-file",
+    "url": "http://jpsys.com/StructureDefinition/VistaFile",
+    "language": "en",
+    "version": "1.0",
+    "name": "VistaFile",
+    "title": "VistA File",
+    "status": "draft",
+    "date": "2023-01-16",
+    "contact": [
+        {
+            "name": "JPSYS"
+        }
+    ],
+    "description": "Base logical model for all VistA files",
+    "kind": "logical",
+    "abstract": true,
+    "type": "VistaFile",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "derivation": "specialization",
+    "differential": {
+        "element": [
+            {
+                "id": "VistaFile",
+                "path": "VistaFile",
+                "definition": "Basis of all VistA Files"
+            },
+            {
+				"id": "VistaFile.IEN",
+				"path": "VistaFile.IEN",
+				"label": "IEN",
+				"short": ".001",
+				"definition": "",
+				"comment": "<details>",
+                "max": "1",
+				"type": [ {
+					"code": "FREE_TEXT"
+				} ]
+			}
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.vista-lm"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="informative"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+  <url value="http://jpsys.com/ImplementationGuide/hl7.fhir.us.vista-lm"/>
+  <version value="0.1.0"/>
+  <name value="VistALM"/>
+  <title value="VistA Files as FHIR Logical Models"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="JPSys"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org/Special/committees/EHR"/>
+		</telecom>
+	</contact>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.jpsys.com"/>
+		</telecom>
+	</contact>
+	<description value="JPSys"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+		</coding>
+	</jurisdiction>
+  <packageId value="jpsys.vistalm"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+				<nameUrl value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>  
+    </page>
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="experimental"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="generate-ttl"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="*/*"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

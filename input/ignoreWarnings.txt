@@ -1,0 +1,3 @@
+== Suppressed Messages ==
+# Known
+Rule eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed
