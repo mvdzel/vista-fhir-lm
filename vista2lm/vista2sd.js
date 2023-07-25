@@ -4,7 +4,8 @@
 const readXlsxFile = require('read-excel-file/node');
 var fs = require('fs');
 
-const BASE_URL = "http://jpsys.com/StructureDefinition/";
+const BASE_URL_SD = "http://jpsys.com/StructureDefinition/";
+const BASE_URL_VS = "http://jpsys.com/ValueSet/";
 var filesds = { };
 var valuesets = [ ];
 
@@ -71,7 +72,7 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
         var type = row[5];
         var details = row[6];
 
-        var _filename = filename.replace(/[^A-Za-z0-9\/\& ]/g,'');;
+        var _filename = filename.replace(/[^A-Za-z0-9\/\& ]/g,'');
         _filename = _filename.replace(/[ \/]/g,'_');
 
         if (filenums.includes(file))
@@ -80,8 +81,8 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
             if (filesds[file] == undefined) {
                 filesd = {
                     "resourceType": "StructureDefinition",
-                    "id": _filename,
-                    "url": BASE_URL + _filename,
+                    "id": `${file}`,
+                    "url": `${BASE_URL_SD}${file}`,
                     "identifier": [ { 
                         "system": "http://va.gov/fhir/identifiers",
                         "value": file
@@ -93,8 +94,8 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                     "description": filedesc[file] || `#${file}`,
                     "kind": "logical",
                     "abstract": false,
-                    "type": _filename,
-                    // "baseDefinition": BASE_URL + "VistaFile",
+                    "type": BASE_URL_SD + _filename,
+                    // "baseDefinition": BASE_URL_SD + "VistaFile",
                     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Resource",
                     "derivation": "specialization",
                     "differential": {
@@ -102,18 +103,17 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                         ] }
                 };
                 filesds[file] = filesd;
-                console.log(filename + " " + file + " " + filesd.description);
+                console.log(filename, file, filesd.description);
             }
     
             // ignore obsolete fields, starting with *
             if (type && !fieldname.startsWith("*")) {
                 // get rid of illegal id chars
-                var _fieldname = fieldname.replace(/#/g,"");
-                _fieldname = _fieldname.replace(/[^A-Za-z0-9\/\& ]/g,'');
+                var _fieldname = fieldname.replace(/[^A-Za-z0-9\/\& ]/g,'');
                 _fieldname = _fieldname.trim().replace(/[ \/\&]/g,'_');
 
                 // get DESCRIPTION for details
-                var description = "";
+                var description = undefined;
                 var card_min = 0;
                 if (details) {
                     var desc_idx = details.indexOf("DESCRIPTION:");
@@ -125,12 +125,11 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                 }
 
                 var element = {
-                    "id": `${_filename}-${_fieldname}`,
+                    "id": `${_filename}.${_fieldname}`.replace(/_/g,'-'),
                     "path": `${_filename}.${_fieldname}`,
                     "label": fieldname,
                     "short": field + (description?" " + description:""),
-                    // "definition": description,
-                    "comment": type,
+                    "definition": field + (description?" " + description:""),
                     "min": card_min,
                     "max": "1"
                 };
@@ -143,43 +142,40 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                     element.type = [ {
                         "code": "Reference",
                         "targetProfile": [
-                            BASE_URL + targetid
+                            BASE_URL_SD + targetid
                         ]
                     } ];
                 }
                 else if (type.startsWith("POINTER TO ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1, type.lastIndexOf(')'));
-                    var targetfilename = type.substring(11, type.indexOf(" FILE")).replace(/ /g, '_');
-                    // convert targetid to name
+                    //var targetfilename = type.substring(11, type.indexOf(" FILE")).replace(/ /g, '_');
                     element.type = [ {
                         "code": "Reference",
                         "targetProfile": [
-                            BASE_URL + targetfilename
+                            BASE_URL_SD + targetid
                         ]
                     } ];
                 }
                 else if (type && type.startsWith("DATE Multiple ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1);
                     element.max = "*";
-                    // convert targetid to name
                     element.type = [ {
                         "code": "Reference",
                         "targetProfile": [
-                            BASE_URL + targetid
+                            BASE_URL_SD + targetid
                         ]
                     } ];
                 }
                 else if (type.startsWith("Multiple ")) {
                     var targetid = type.substring(type.lastIndexOf('#') + 1);
                     element.max = "*";
-                    // convert targetid to name
                     element.type = [ {
-                        "code": targetid
+                        "code": BASE_URL_SD + targetid
                     } ];               
                 }
                 else {
                     element.type = [ {
-                        "code": type.replace(' ','_')
+                        "code": type.replace(/ /g,'_')
                     } ];
                 }
 
@@ -188,14 +184,15 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                     var valueset = { 
                         "resourceType": "ValueSet",
                         "id": `${file}-${field}`,
-                        "url": `${BASE_URL}${file}-${field}`,
+                        "url": `${BASE_URL_VS}${file}-${field}`,
                         "identifier": [ { 
                             "system": "http://va.gov/fhir/vistaDefinedTerms",
                             "value": `${file}-${field}`
                         } ],
-                        "name": `${_filename}-${_fieldname}`,
+                        "name": `${_filename}_${_fieldname}`.replace(/-/g,'_'),
                         "title": `${filename}-${fieldname}`,
                         "status": "draft",
+                        "experimental": false,
                         "description": `ValueSet for file ${filename} and field ${fieldname} (${file}-${field})`,
                         "compose": {
                             "include": [
@@ -217,6 +214,8 @@ readXlsxFile("vista-dox2.xlsx", { sheet: "vista-dox2", transformData(data)
                     };
                     valuesets.push(valueset);
 
+                    // workaround for QA error
+                    element.type.push({ "code": "Coding" });
                     element.binding = {
                         "strength": "required",
                         "valueSet": valueset.url

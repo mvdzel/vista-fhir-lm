@@ -3,18 +3,18 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/AGENCY" key="StructureDefinition-AGENCY" name="AGENCY"/>
+<artifact id="StructureDefinition/4.11" key="StructureDefinition-4.11" name="AGENCY"/>
 <artifact id="ValueSet/4.11-.02" key="ValueSet-4.11-.02" name="AGENCY-AGENCY CODE"/>
-<artifact id="StructureDefinition/ALTERNATE_EDITOR" key="StructureDefinition-ALTERNATE_EDITOR" name="ALTERNATE EDITOR"/>
-<artifact id="StructureDefinition/COUNTRY_CODE" key="StructureDefinition-COUNTRY_CODE" name="COUNTRY CODE"/>
+<artifact id="StructureDefinition/1.2" key="StructureDefinition-1.2" name="ALTERNATE EDITOR"/>
+<artifact id="StructureDefinition/779.004" key="StructureDefinition-779.004" name="COUNTRY CODE"/>
 <artifact id="ValueSet/779.004-99.98" key="ValueSet-779.004-99.98" name="COUNTRY CODE-MASTER ENTRY FOR VUID"/>
-<artifact id="StructureDefinition/DOMAIN" key="StructureDefinition-DOMAIN" name="DOMAIN"/>
+<artifact id="StructureDefinition/4.2" key="StructureDefinition-4.2" name="DOMAIN"/>
 <artifact id="ValueSet/4.2-1.7" key="ValueSet-4.2-1.7" name="DOMAIN-DISABLE TURN COMMAND"/>
 <artifact id="ValueSet/4.2-6.61" key="ValueSet-4.2-6.61" name="DOMAIN-TCP/IP POLL FLAG"/>
-<artifact id="StructureDefinition/FACILITY_TYPE" key="StructureDefinition-FACILITY_TYPE" name="FACILITY TYPE"/>
+<artifact id="StructureDefinition/4.1" key="StructureDefinition-4.1" name="FACILITY TYPE"/>
 <artifact id="ValueSet/4.1-3" key="ValueSet-4.1-3" name="FACILITY TYPE-STATUS"/>
-<artifact id="StructureDefinition/HL7_DEGREE" key="StructureDefinition-HL7_DEGREE" name="HL7 DEGREE"/>
-<artifact id="StructureDefinition/INSTITUTION" key="StructureDefinition-INSTITUTION" name="INSTITUTION"/>
+<artifact id="StructureDefinition/771.9" key="StructureDefinition-771.9" name="HL7 DEGREE"/>
+<artifact id="StructureDefinition/4" key="StructureDefinition-4" name="INSTITUTION"/>
 <artifact id="ValueSet/4-95" key="ValueSet-4-95" name="INSTITUTION-AGENCY CODE"/>
 <artifact id="ValueSet/4-102" key="ValueSet-4-102" name="INSTITUTION-CERNER"/>
 <artifact id="ValueSet/4-720" key="ValueSet-4-720" name="INSTITUTION-CURRENT LOCATION"/>
@@ -23,11 +23,11 @@
 <artifact id="ValueSet/4-11" key="ValueSet-4-11" name="INSTITUTION-STATUS"/>
 <artifact id="ValueSet/4-802" key="ValueSet-4-802" name="INSTITUTION-TIMEZONE EXCEPTION"/>
 <artifact id="ValueSet/4-.06" key="ValueSet-4-.06" name="INSTITUTION-VA TYPE CODE"/>
-<artifact id="StructureDefinition/LANGUAGE" key="StructureDefinition-LANGUAGE" name="LANGUAGE"/>
+<artifact id="StructureDefinition/.85" key="StructureDefinition-.85" name="LANGUAGE"/>
 <artifact id="ValueSet/.85-.06" key="ValueSet-.85-.06" name="LANGUAGE-SCOPE"/>
 <artifact id="ValueSet/.85-.07" key="ValueSet-.85-.07" name="LANGUAGE-TYPE"/>
-<artifact id="StructureDefinition/NAME_COMPONENTS" key="StructureDefinition-NAME_COMPONENTS" name="NAME COMPONENTS"/>
-<artifact id="StructureDefinition/NEW_PERSON" key="StructureDefinition-NEW_PERSON" name="NEW PERSON"/>
+<artifact id="StructureDefinition/20" key="StructureDefinition-20" name="NAME COMPONENTS"/>
+<artifact id="StructureDefinition/200" key="StructureDefinition-200" name="NEW PERSON"/>
 <artifact id="ValueSet/200-11.6" key="ValueSet-200-11.6" name="NEW PERSON-ALLOW ARA ACCESS"/>
 <artifact id="ValueSet/200-71" key="ValueSet-200-71" name="NEW PERSON-ALLOW VERIFYING OF OTHERS"/>
 <artifact id="ValueSet/200-41" key="ValueSet-200-41" name="NEW PERSON-ALLOWED TO USE SPOOLER"/>
@@ -72,11 +72,11 @@
 <artifact id="ValueSet/200-200.09" key="ValueSet-200-200.09" name="NEW PERSON-TYPE-AHEAD"/>
 <artifact id="ValueSet/200-7.2" key="ValueSet-200-7.2" name="NEW PERSON-VERIFY CODE never expires"/>
 <artifact id="ValueSet/200-202.03" key="ValueSet-200-202.03" name="NEW PERSON-XUS Active User"/>
-<artifact id="StructureDefinition/OE_RR_LIST" key="StructureDefinition-OE_RR_LIST" name="OE/RR LIST"/>
+<artifact id="StructureDefinition/100.21" key="StructureDefinition-100.21" name="OE/RR LIST"/>
 <artifact id="ValueSet/100.21-1.7" key="ValueSet-100.21-1.7" name="OE/RR LIST-SUBSCRIBE"/>
 <artifact id="ValueSet/100.21-1" key="ValueSet-100.21-1" name="OE/RR LIST-TYPE"/>
 <artifact id="ValueSet/100.21-11" key="ValueSet-100.21-11" name="OE/RR LIST-VISIBILITY"/>
-<artifact id="StructureDefinition/OPTION" key="StructureDefinition-OPTION" name="OPTION"/>
+<artifact id="StructureDefinition/19" key="StructureDefinition-19" name="OPTION"/>
 <artifact id="ValueSet/19-13" key="ValueSet-19-13" name="OPTION-DELEGABLE"/>
 <artifact id="ValueSet/19-79" key="ValueSet-19-79" name="OPTION-DIASKHD"/>
 <artifact id="ValueSet/19-78" key="ValueSet-19-78" name="OPTION-DIPCRIT"/>
@@ -100,23 +100,23 @@
 <artifact id="ValueSet/19-83" key="ValueSet-19-83" name="OPTION-SUPRESS DEVICE PROMPT"/>
 <artifact id="ValueSet/19-4" key="ValueSet-19-4" name="OPTION-TYPE"/>
 <artifact id="ValueSet/19-.15" key="ValueSet-19-.15" name="OPTION-X ACTION PRESENT"/>
-<artifact id="StructureDefinition/PAID_EMPLOYEE" key="StructureDefinition-PAID_EMPLOYEE" name="PAID EMPLOYEE"/>
+<artifact id="StructureDefinition/450" key="StructureDefinition-450" name="PAID EMPLOYEE"/>
 <artifact id="ValueSet/450-902" key="ValueSet-450-902" name="PAID EMPLOYEE-Requires Transmission"/>
-<artifact id="StructureDefinition/PROBLEM_SELECTION_LIST" key="StructureDefinition-PROBLEM_SELECTION_LIST" name="PROBLEM SELECTION LIST"/>
+<artifact id="StructureDefinition/125" key="StructureDefinition-125" name="PROBLEM SELECTION LIST"/>
 <artifact id="ValueSet/125-.04" key="ValueSet-125-.04" name="PROBLEM SELECTION LIST-CLASS"/>
-<artifact id="StructureDefinition/PROGRAM_OF_STUDY" key="StructureDefinition-PROGRAM_OF_STUDY" name="PROGRAM OF STUDY"/>
-<artifact id="StructureDefinition/PROVIDER_CLASS" key="StructureDefinition-PROVIDER_CLASS" name="PROVIDER CLASS"/>
-<artifact id="StructureDefinition/SERVICE_SECTION" key="StructureDefinition-SERVICE_SECTION" name="SERVICE/SECTION"/>
+<artifact id="StructureDefinition/8932.2" key="StructureDefinition-8932.2" name="PROGRAM OF STUDY"/>
+<artifact id="StructureDefinition/7" key="StructureDefinition-7" name="PROVIDER CLASS"/>
+<artifact id="StructureDefinition/49" key="StructureDefinition-49" name="SERVICE/SECTION"/>
 <artifact id="ValueSet/49-12" key="ValueSet-49-12" name="SERVICE/SECTION-AMBULATORY CARE FLAG"/>
 <artifact id="ValueSet/49-11" key="ValueSet-49-11" name="SERVICE/SECTION-TYPE OF COSTING SECTION"/>
 <artifact id="ValueSet/49-1.7" key="ValueSet-49-1.7" name="SERVICE/SECTION-TYPE OF SERVICE"/>
-<artifact id="StructureDefinition/STATE" key="StructureDefinition-STATE" name="STATE"/>
+<artifact id="StructureDefinition/5" key="StructureDefinition-5" name="STATE"/>
 <artifact id="ValueSet/5-2.1" key="ValueSet-5-2.1" name="STATE-AAC RECOGNIZED"/>
 <artifact id="ValueSet/5-2.2" key="ValueSet-5-2.2" name="STATE-US STATE OR POSSESSION"/>
-<artifact id="StructureDefinition/TERMINAL_TYPE" key="StructureDefinition-TERMINAL_TYPE" name="TERMINAL TYPE"/>
+<artifact id="StructureDefinition/3.2" key="StructureDefinition-3.2" name="TERMINAL TYPE"/>
 <artifact id="ValueSet/3.2-.02" key="ValueSet-3.2-.02" name="TERMINAL TYPE-SELECTABLE AT SIGN-ON"/>
-<artifact id="StructureDefinition/TITLE" key="StructureDefinition-TITLE" name="TITLE"/>
-<artifact id="StructureDefinition/WORLD_TIMEZONES" key="StructureDefinition-WORLD_TIMEZONES" name="WORLD TIMEZONES"/>
+<artifact id="StructureDefinition/3.1" key="StructureDefinition-3.1" name="TITLE"/>
+<artifact id="StructureDefinition/1.71" key="StructureDefinition-1.71" name="WORLD TIMEZONES"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

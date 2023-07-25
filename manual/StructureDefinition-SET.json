@@ -1,0 +1,20 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "SET",
+    "url": "http://jpsys.com/StructureDefinition/SET",
+    "name": "SET",
+    "status": "active",
+    "kind": "complex-type",
+    "abstract": false,
+    "type": "SET",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coding",
+    "derivation": "constraint",
+    "differential": {
+      "element": [
+        {
+          "id": "Coding",
+          "path": "Coding"
+        }
+      ]
+    }
+  }
